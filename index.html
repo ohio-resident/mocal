@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ohio</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+	<style>
+		body {
+			background-image: url(https://www.biolib.cz/IMG/GAL/9574.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		video {
+			height: 100vh;
+			width: 100vw;
+		}
+		button {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			z-index: 100;
+			background-image: url(375.png);
+			background-repeat: no-repeat;
+			background-size: 50%;
+			background-position: center;
+		}
+	</style>
+</head>
+<body>
+
+	<button onclick="playvid();"></button>
+
+	<video src="videoplayback.mp4" loop></video>
+
+	<script>
+		function playvid() {
+			const video = document.getElementsByTagName('video')[0];
+			//unmute video
+			video.play();
+		};
+	</script>
+
+</body>
+</html>
